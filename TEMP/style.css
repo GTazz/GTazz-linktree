@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Kufam", sans-serif;
+    background-color: var(--COLOR-background-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#card {
+    background-color: var(--COLOR-background-2);
+    /* background-image: url('background.png'); */
+    border-radius: 25px;
+    align-items: left;
+    border: 1px solid var(--COLOR-border);
+    box-shadow: 0 0 15px 5px var(--COLOR-background-shadow);
+}
+
+/* definir tamanho de tudo dentro do card */
+#card>div {
+    width: 286px;
+}
+
+h1,
+h2 {
+    color: var(--COLOR-font-1);
+    font-weight: normal;
+    text-shadow: 0 0 5px var(--COLOR-border);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: var(--COLOR-font-2);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* separar itens com espaçamento maximo entre itens */
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+}
+
+#profile img {
+    border: 2.5px solid hsl(210, 30%, 95%);
+    border-radius: 50%;
+    width: 121px;
+    height: 121px;
+}
+
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about p,
+#contact>div,
+#links>div {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#contact>div {
+    display: flex;
+    align-items: center;
+}
+
+#links p {
+    margin-bottom: -2px;
+}
+
+#links>div {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+/*apply background blur */
+#links a {
+    background-color: var(--COLOR-links-div);
+    border: 0.5px solid var(--COLOR-border);
+    text-decoration: none;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* modify svg currentColor */
+#links svg {
+    fill: var(--COLOR-font-2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+#links p {
+    font-size: 8.5px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid var(--COLOR-border);
+}
+
+#card>div {
+    background-color: var(--COLOR-card-filter);
+    padding: 30px;
+    border-radius: 25px;
+}
