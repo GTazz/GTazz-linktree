@@ -3,6 +3,7 @@ import profilePicture from '/picture.jpg'
 import './language.css'
 import './theme.css'
 import './App.css'
+import Balatro from './Balatro';
 
 function App() {
   const userLang = navigator.language || navigator.userLanguage;
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <section className="card">
-        <div>
+        <div className="card-content">
           <div className="profile">
 
             <img src={profilePicture} alt="Profile picture" />
@@ -82,7 +83,18 @@ function App() {
               </a>
             </div>
           </div>
-        </div>  
+        </div>
+        <Balatro
+          isRotate={false}
+          mouseInteraction={false}
+          pixelFilter={2000}
+          color1="#21262C"
+          color2="#0B0D0F"
+          color3="#21262C"
+          // color1="#EEF2F6"
+          // color2="#C4CCD4"
+          // color3="#EEF2F6"
+        />
       </section>
     </>
   )

@@ -12,17 +12,29 @@ body {
 }
 
 .card {
-    background-color: var(--COLOR-background-2);
-    /* background-image: url('background.png'); */
     border-radius: 25px;
-    align-items: left;
     border: 1px solid var(--COLOR-border);
-    box-shadow: 0 0 15px 5px var(--COLOR-background-shadow);
+    box-shadow: 0 0 15px 5px var(--CObackground-shadow);
+    position: relative;
+    overflow: hidden;
 }
 
-/* definir tamanho de tudo dentro do card */
-.card>div {
+.card-content {
+    position: relative;
+    z-index: 2;
     width: 286px;
+    align-items: left;
+    background-color: var(--COLOR-card-filter);
+    padding: 30px;
+}
+
+.balatro-container {
+    position: absolute !important;
+    z-index: 1 !important;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
 }
 
 h1,
@@ -122,18 +134,4 @@ hr {
     margin: 20px 0;
     border: none;
     border-top: 1px solid var(--COLOR-border);
-}
-
-.card>div {
-    background-color: var(--COLOR-card-filter);
-    padding: 30px;
-    border-radius: 25px;
-}
-
-Balatro {
-    width: 100px;
-    height: 100px;
-    color1: #001aff;
-    color2: #00ff00;
-    color3: #ff00ff;
 }
