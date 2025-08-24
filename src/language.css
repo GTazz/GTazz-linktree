@@ -21,26 +21,26 @@
 }
 
 /* PARSING VARIABLES */
-#about>h2::after {
+.about>h2::after {
     content: var(--TEXT-about-title);
 }
 
-#about>p::after {
+.about>p::after {
     content: var(--TEXT-about-description);
 }
 
-#contact>h2::after {
+.contact>h2::after {
     content: var(--TEXT-contact-title);
 }
 
-#email::after {
+.email::after {
     content: var(--TEXT-contact-email);
 }
 
-#phone::after {
+.phone::after {
     content: var(--TEXT-contact-phone);
 }
 
-#links>h2::after {
+.links>h2::after {
     content: var(--TEXT-links-title);
 }
