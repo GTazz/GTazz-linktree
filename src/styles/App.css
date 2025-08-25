@@ -14,7 +14,7 @@ body {
 .card {
     border-radius: 25px;
     border: 1px solid var(--COLOR-border);
-    box-shadow: 0 0 15px 5px var(--CObackground-shadow);
+    box-shadow: 0 0 15px 5px var(--COLOR-background-shadow);
     position: relative;
     overflow: hidden;
 }
@@ -57,9 +57,10 @@ p {
     color: var(--COLOR-font-2);
     font-size: 16px;
     font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-/* separar itens com espaçamento maximo entre itens */
 .profile {
     display: flex;
     align-items: center;
@@ -68,7 +69,7 @@ p {
 }
 
 .profile img {
-    border: 2.5px solid hsl(210, 30%, 95%);
+    border: 2.5px solid hsl(0, 0%, 100%);
     border-radius: 50%;
     width: 121px;
     height: 121px;
@@ -80,29 +81,13 @@ p {
     align-items: center;
 }
 
-.about p,
-.contact>div,
 .links>div {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.contact>div {
-    display: flex;
-    align-items: center;
-}
-
-.links p {
-    margin-bottom: -2px;
-}
-
-.links>div {
+    padding: 5px 5px 0px;
     justify-content: space-between;
     display: flex;
     align-items: center;
 }
 
-/*apply background blur */
 .links a {
     background-color: var(--COLOR-links-div);
     border: 0.5px solid var(--COLOR-border);
@@ -118,7 +103,6 @@ p {
     gap: 3px;
 }
 
-/* modify svg currentColor */
 .links svg {
     fill: var(--COLOR-font-2);
     border-radius: 50%;
@@ -128,10 +112,11 @@ p {
 
 .links p {
     font-size: 8.5px;
+    margin-bottom: -2px;
 }
 
 hr {
-    margin: 20px 0;
     border: none;
+    margin: 20px 0;
     border-top: 1px solid var(--COLOR-border);
 }

@@ -1,5 +1,5 @@
-import { Renderer, Program, Mesh, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
+import { Renderer, Program, Mesh, Triangle } from "ogl";
 
 
 function hexToVec4(hex) {

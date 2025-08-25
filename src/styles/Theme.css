@@ -1,7 +1,9 @@
 /* light mode */
 :root {
-    --COLOR-background-1: hsl(210, 30%, 95%);
-    --COLOR-background-2: hsl(210, 15%, 85%);
+    /* --COLOR-background-1: hsl(210, 30%, 95%);
+    --COLOR-background-2: hsl(210, 15%, 85%); */
+    --COLOR-background-1: #eef2f6;
+    --COLOR-background-2: #d3d9de;
     --COLOR-background-shadow: hsl(210, 15%, 5%, 15%);
     --COLOR-card-filter: hsl(210, 30%, 95%, 25%);
     --COLOR-font-1: hsl(210, 15%, 5%);
@@ -13,8 +15,10 @@
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --COLOR-background-1: hsl(210, 15%, 15%);
-        --COLOR-background-2: hsl(210, 15%, 5%);
+        /* --COLOR-background-1: hsl(210, 15%, 15%);
+        --COLOR-background-2: hsl(210, 15%, 5%); */
+        --COLOR-background-1: #21262c;
+        --COLOR-background-2: #0b0d0f;
         --COLOR-background-shadow: hsl(210, 15%, 5%, 30%);
         --COLOR-card-filter: hsl(210, 15%, 5%, 60%);
         --COLOR-font-1: hsl(210, 30%, 95%);
