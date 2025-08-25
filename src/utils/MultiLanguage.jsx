@@ -21,8 +21,12 @@ const LANGUAGES = {
 };
 
 const getLanguagePreference = () => {
-  const userLang = navigator.language || navigator.userLanguage;
-  return userLang.startsWith('pt') ? LANGUAGES.pt : LANGUAGES.en;
+  let userLang = navigator.language || navigator.userLanguage;
+  userLang = userLang.toLowerCase();
+  const userLangFull = userLang.replace('-', '_'); // Get the language code (e.g., "en_us", "pt_br")
+  const userLangTrunc = userLang.split('-')[0]; // Get the language code (e.g., "en", "pt")
+
+  return LANGUAGES[userLangFull] || LANGUAGES[userLangTrunc] || LANGUAGES.en;
 };
 
 const useLanguage = () => {
