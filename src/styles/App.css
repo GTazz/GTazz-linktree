@@ -20,6 +20,7 @@ body {
 }
 
 .card-content {
+    backdrop-filter: blur(0.7px);
     position: relative;
     z-index: 2;
     width: 286px;
@@ -32,7 +33,7 @@ body {
     position: absolute !important;
     z-index: 1 !important;
     top: 0;
-    left: 0;    
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -96,12 +97,50 @@ p {
     border-radius: 10px;
     width: 55px;
     height: 55px;
+    transition: transform 0.1s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.links a>section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3px;
+    position: relative;
+    z-index: 3;
 }
+
+.glare-hover {
+    width: 100px;
+    height: 100px;
+    position: absolute !important;
+    z-index: 4 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.links a:hover {
+    transform: scale(1.1);
+    background-color: var(--COLOR-links-hover);
+    box-shadow: 0 0 15px 2px var(--COLOR-links-hover);
+}
+.links a:hover>section>* {
+    color: var(--COLOR-links-component-hover);
+    fill: var(--COLOR-links-component-hover);
+}
+
+.linkedin:hover { --COLOR-links-hover: var(--COLOR-links-linkedin-hover); }
+.github:hover { --COLOR-links-hover: var(--COLOR-links-github-hover); }
+.youtube:hover { --COLOR-links-hover: var(--COLOR-links-youtube-hover); }
+.instagram:hover { --COLOR-links-hover: var(--COLOR-links-instagram-hover); }
+
 
 .links svg {
     fill: var(--COLOR-font-2);

@@ -9,7 +9,14 @@
     --COLOR-font-1: hsl(210, 15%, 5%);
     --COLOR-font-2: hsl(210, 15%, 20%);
     --COLOR-border: hsl(210, 15%, 60%);
-    --COLOR-links-div: hsl(210, 31%, 95%, 0.5%)
+    --COLOR-links-div: hsl(210, 15%, 5%, 3%);
+    --COLOR-links-linkedin-hover: hsl(210, 100%, 50%, 0.5);
+    --COLOR-links-github-hover: hsla(110, 100%, 35%, 0.6);
+    --COLOR-links-youtube-hover: hsla(0, 100%, 50%, 0.5);
+    --COLOR-links-instagram-hover: hsla(310, 80%, 50%, 0.5);
+
+    /* NO VARIANTS */
+    --COLOR-links-component-hover: hsl(210, 30%, 95%);
 }
 
 /* dark mode */
@@ -24,6 +31,10 @@
         --COLOR-font-1: hsl(210, 30%, 95%);
         --COLOR-font-2: hsl(210, 30%, 85%);
         --COLOR-border: hsl(210, 15%, 40%);
-        --COLOR-links-div: hsl(210, 15%, 5%, 0.5%);
+        --COLOR-links-div: hsl(210, 15%, 5%, 3%);
+        --COLOR-links-linkedin-hover: hsl(210, 80%, 50%, 0.4);
+        --COLOR-links-github-hover: hsla(110, 80%, 50%, 0.4);
+        --COLOR-links-youtube-hover: hsla(0, 80%, 50%, 0.4);
+        --COLOR-links-instagram-hover: hsla(310, 80%, 50%, 0.4);
     }
 }
