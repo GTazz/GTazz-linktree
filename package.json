@@ -1,6 +1,5 @@
 {
   "name": "gtazz-linktree",
-  "homepage": "https://gtazz.github.io/GTazz-linktree/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,12 +7,9 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
