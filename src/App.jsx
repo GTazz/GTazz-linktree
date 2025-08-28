@@ -1,7 +1,8 @@
 import useLanguage from './utils/MultiLanguage'
 import useTheme from './utils/Theme'
 import Balatro from './components/Balatro';
-import GlareHover from './components/GlareHover/GlareHover';
+import GlareHover from './components/GlareHover';
+import NotificationToast from './components/NotificationToast';
 import profilePicture from '/picture.jpg'
 import './styles/App.css'
 import './styles/Theme.css'
@@ -30,8 +31,26 @@ function App() {
           <hr />
           <div className="contact">
             <h2>{langTexts.contactTitle}</h2>
-            <p className="email">{langTexts.contactEmail}: contact@gtazz.dev</p>
-            <p className="phone">{langTexts.contactPhone}: +55 (11) 96374-9115</p>
+            <p className="email">
+              {langTexts.contactEmail+": "}
+              <span
+                className="clickable-text"
+                onClick={() => window.copyToClipboard('contact@gtazz.dev', 'email', langTexts)}
+                title={langTexts.clickToCopy}
+              >
+                contact@gtazz.dev
+              </span>
+            </p>
+            <p className="phone">
+              {langTexts.contactPhone+": "}
+              <span
+                className="clickable-text"
+                onClick={() => window.copyToClipboard('+55 (11) 96374-9115', 'phone', langTexts)}
+                title={langTexts.clickToCopy}
+              >
+                +55 (11) 96374-9115
+              </span>
+            </p>
           </div>
           <hr />
           <div className="links">
@@ -46,7 +65,7 @@ function App() {
                   </svg>
                   <p>LinkedIn</p>
                 </section>
-                <GlareHover/>
+                <GlareHover />
               </a>
               <a className="github" href="https://github.com/GTazz" target="_blank" rel="noopener">
                 <section>
@@ -57,18 +76,18 @@ function App() {
                   </svg>
                   <p>GitHub</p>
                 </section>
-                <GlareHover/>
+                <GlareHover />
               </a>
               <a className="youtube" href="https://www.youtube.com/@GabTazz" target="_blank" rel="noopener">
-                  <section>
-                    <svg fill="currentColor" aria-label="YouTube icon" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75" xml:space="preserve">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                      <g id="SVGRepo_iconCarrier"> <g> <g> <path d="M39.969,59.587c7.334-3.803,14.604-7.571,21.941-11.376c-7.359-3.84-14.627-7.63-21.941-11.447 C39.969,44.398,39.969,51.954,39.969,59.587z" /> <path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z M82.176,65.189c-0.846,3.67-3.848,6.377-7.461,6.78c-8.557,0.957-17.217,0.962-25.842,0.957c-8.625,0.005-17.287,0-25.846-0.957 c-3.613-0.403-6.613-3.11-7.457-6.78c-1.203-5.228-1.203-10.933-1.203-16.314s0.014-11.088,1.217-16.314 c0.844-3.67,3.844-6.378,7.457-6.782c8.559-0.956,17.221-0.961,25.846-0.956c8.623-0.005,17.285,0,25.841,0.956 c3.615,0.404,6.617,3.111,7.461,6.782c1.203,5.227,1.193,10.933,1.193,16.314S83.379,59.962,82.176,65.189z" /> </g> </g> </g>
-                    </svg>
-                    <p>YouTube</p>
-                  </section>
-                <GlareHover/>
+                <section>
+                  <svg fill="currentColor" aria-label="YouTube icon" role="img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.75 97.75" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                    <g id="SVGRepo_iconCarrier"> <g> <g> <path d="M39.969,59.587c7.334-3.803,14.604-7.571,21.941-11.376c-7.359-3.84-14.627-7.63-21.941-11.447 C39.969,44.398,39.969,51.954,39.969,59.587z" /> <path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z M82.176,65.189c-0.846,3.67-3.848,6.377-7.461,6.78c-8.557,0.957-17.217,0.962-25.842,0.957c-8.625,0.005-17.287,0-25.846-0.957 c-3.613-0.403-6.613-3.11-7.457-6.78c-1.203-5.228-1.203-10.933-1.203-16.314s0.014-11.088,1.217-16.314 c0.844-3.67,3.844-6.378,7.457-6.782c8.559-0.956,17.221-0.961,25.846-0.956c8.623-0.005,17.285,0,25.841,0.956 c3.615,0.404,6.617,3.111,7.461,6.782c1.203,5.227,1.193,10.933,1.193,16.314S83.379,59.962,82.176,65.189z" /> </g> </g> </g>
+                  </svg>
+                  <p>YouTube</p>
+                </section>
+                <GlareHover />
               </a>
               <a className="instagram" href="https://www.instagram.com/tazz.py/" target="_blank" rel="noopener">
                 <section>
@@ -78,7 +97,7 @@ function App() {
                   </svg>
                   <p>Instagram</p>
                 </section>
-                <GlareHover/>
+                <GlareHover />
               </a>
             </div>
           </div>
@@ -92,6 +111,9 @@ function App() {
           color3={themeColors.balatro1}
         />
       </section>
+
+      {/* Toast Notification Component */}
+      <NotificationToast />
     </>
   )
 }

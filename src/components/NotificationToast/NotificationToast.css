@@ -1,0 +1,78 @@
+/* Toast Notification Styles */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideInRight 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
+}
+
+.toast-notification.no-auto-hide {
+    animation: slideInRight 0.3s ease-out;
+}
+
+.toast-notification.manual-slide-out {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+
+.toast-content {
+    background: var(--COLOR-popup-background);
+    color: var(--COLOR-popup-text);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--COLOR-popup-shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--COLOR-popup-border);
+    backdrop-filter: blur(10px);
+    /* Ensure smooth transitions */
+    transition: all 0.2s ease;
+}
+
+.toast-icon {
+    fill: var(--COLOR-popup-text);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    /* Better alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Prevent animation conflicts and improve performance */
+.toast-notification * {
+    will-change: auto;
+}
+
+.toast-notification {
+    will-change: transform, opacity;
+}

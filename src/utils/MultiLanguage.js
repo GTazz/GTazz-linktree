@@ -8,7 +8,11 @@ const LANGUAGES = {
     contactTitle: "CONTACT",
     contactEmail: "Email",
     contactPhone: "Phone",
-    linksTitle: "LINKS"
+    linksTitle: "LINKS",
+    // Popup messages
+    emailCopied: "Email copied!",
+    phoneCopied: "Phone copied!",
+    clickToCopy: "Click to copy"
   },
   pt: {
     aboutTitle: "SOBRE MIM",
@@ -16,7 +20,11 @@ const LANGUAGES = {
     contactTitle: "CONTATO",
     contactEmail: "Email",
     contactPhone: "Telefone",
-    linksTitle: "LINKS"
+    linksTitle: "LINKS",
+    // Popup messages
+    emailCopied: "Email copiado!",
+    phoneCopied: "Telefone copiado!",
+    clickToCopy: "Clique para copiar"
   }
 };
 
