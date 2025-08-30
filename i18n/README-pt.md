@@ -1,28 +1,27 @@
 # GTazz Linktree
 
 <details>
-<summary>🌎 Language</summary>
+<summary>🌎 Linguagem</summary>
 <br>
   
-* 🇺🇸 en (Current)
-* 🇧🇷 [pt-BR](./i18n/README-pt.md)
----
+* 🇺🇸 [en](../README.md)
+* 🇧🇷 pt-BR (Current)
 
 </details>
 <br>
 
-A modern, responsive personal linktree built with React and Vite. Features automatic theme switching, multilingual support, and interactive copy-to-clipboard functionality.
+Meu linktree pessoal moderno e responsivo criado com React e Vite. Inclui troca automática de tema, suporte multilíngue e funcionalidade de copiar para área de transferência.
 
-## ✨ Features
+## ✨ Funcionalidades
 
-- **Auto Theme Detection**: Automatically switches between light/dark mode based on system preference
-- **Multilingual Support**: English and Portuguese language detection based on browser settings
-- **Copy to Clipboard**: Click email/phone to copy with notification feedback
-- **Interactive Effects**: Glare hover effects and smooth animations
-- **Responsive Design**: Works perfectly on all devices
+- **Tema Automático**: Troca automaticamente entre modo claro/escuro baseado na configuração do sistema
+- **Suporte Multilíngue**: Detecta automaticamente inglês ou português através das configurações do navegador
+- **Copiar com Um Clique**: Clique no email/telefone para copiar automaticamente, com notificação de confirmação
+- **Efeitos Interativos**: Efeitos de hover suaves e animações fluidas
+- **Design Responsivo**: Funciona perfeitamente em qualquer dispositivo
 
 ```
-No language and theme manual switches?
+Sem botões manuais de idioma e tema?
 ——————————————————————————————————————
 ⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
 ⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
@@ -40,20 +39,20 @@ No language and theme manual switches?
 —————————————————————————————
 ```
 
-_I chose automatic detection for a cleaner, minimalistic user interface._
+_Escolhi detecção automática para manter a interface limpa e minimalista._
 
-## 🚀 Quick Start
+## 🚀 Como executar
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 🛠️ Key Components
+## 🛠️ Componentes Principais
 
-The project uses custom React hooks for automatic theme and language switching, plus interactive components from React Bits:
+O projeto utiliza hooks React customizados para troca automática de tema e idioma, além de componentes interativos do React Bits:
 
-### Custom Utils
+### Utils Customizados
 
 ```jsx
 import useLanguage from "./utils/MultiLanguage";
@@ -66,7 +65,7 @@ function App() {
 }
 ```
 
-### Balatro Background Effect
+### Efeito de Fundo Balatro
 
 ```jsx
 import Balatro from "./components/Balatro";
@@ -81,7 +80,7 @@ import Balatro from "./components/Balatro";
 />;
 ```
 
-### GlareHover Social Links
+### Links Sociais com GlareHover
 
 ```jsx
 import GlareHover from "./components/GlareHover";
@@ -99,7 +98,7 @@ import GlareHover from "./components/GlareHover";
 </a>;
 ```
 
-### Copy-to-Clipboard Feature
+### Funcionalidade de Copiar
 
 ```jsx
 <span
@@ -113,7 +112,7 @@ import GlareHover from "./components/GlareHover";
 </span>
 ```
 
-### Notification Toast
+### Notificação Toast
 
 ```jsx
 import NotificationToast from "./components/NotificationToast";
@@ -121,17 +120,17 @@ import NotificationToast from "./components/NotificationToast";
 function App() {
   return (
     <>
-      {/* Your content */}
+      {/* Seu conteúdo */}
       <NotificationToast />
     </>
   );
 }
 ```
 
-### Automatic Theme Detection
+### Detecção Automática de Tema
 
 ```javascript
-// Theme.js - Auto-detects system preference
+// Theme.js - Detecta automaticamente a preferência do sistema
 const useTheme = () => {
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia(
@@ -144,35 +143,35 @@ const useTheme = () => {
 };
 ```
 
-### Automatic Language Detection
+### Detecção Automática de Idioma
 
 ```javascript
-// MultiLanguage.js - Auto-detects browser language
+// MultiLanguage.js - Detecta automaticamente o idioma do navegador
 const getLanguagePreference = () => {
   let userLang = navigator.language || navigator.userLanguage;
   return LANGUAGES[userLang.split("-")[0]] || LANGUAGES.en;
 };
 ```
 
-## 🎨 Tech Stack
+## 🎨 Tecnologias Utilizadas
 
-- **React** - UI framework
-- **Vite** - Build tool
-- **CSS Variables** - Dynamic theming
-- **Navigator API** - Clipboard functionality
+- **React** - Framework para interface de usuário
+- **Vite** - Ferramenta de build e desenvolvimento
+- **CSS Variables** - Sistema de temas dinâmicos
+- **Navigator API** - Funcionalidade de área de transferência
 
-### Interactive Components
+### Componentes Interativos
 
-- **Balatro** - Animated gradient background effect (React Bits)
-- **GlareHover** - Interactive hover glare effect on social links (React Bits)
-- **NotificationToast** - Copy feedback notification system (AI Claude Sonnet 4)
+- **Balatro** - Efeito de fundo gradiente animado (React Bits)
+- **GlareHover** - Efeito de brilho interativo nos links sociais (React Bits)
+- **NotificationToast** - Sistema de notificação para feedback de cópia (IA Claude Sonnet 4)
 
-_Special thanks to [React Bits](https://reactbits.dev) for the amazing interactive components!_
+_Agradecimentos ao [React Bits](https://reactbits.dev) pelos excelentes componentes interativos!_
 
-## 📄 License
+## 📄 Licença
 
-Free to use and modify for personal projects.
+Livre para uso e modificação em projetos pessoais.
 
 ---
 
-_Feel free to fork and customize this linktree for your own use!_
+_Sinta-se livre para fazer fork e personalizar este linktree para seu próprio uso!_
