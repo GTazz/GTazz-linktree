@@ -1,16 +1,5 @@
 # GTazz Linktree
 
-<details>
-<summary>🌎 Language</summary>
-<br>
-  
-* 🇺🇸 en (Current)
-* 🇧🇷 [pt-BR](./i18n/README-pt.md)
----
-
-</details>
-<br>
-
 A modern, responsive personal linktree built with React and Vite. Features automatic theme switching, multilingual support, and interactive copy-to-clipboard functionality.
 
 ## ✨ Features
